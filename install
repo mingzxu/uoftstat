@@ -1,0 +1,16 @@
+#Install packages 
+mypackages <- c("dplyr", "tidyverse", "Hmisc", "broom", "data.table", "pROC")
+
+# check if packages are installed 
+
+for (p in mypackages){
+  if(!require(p, character.only = TRUE)){
+    install.packages(p)
+    library(p, character.only = TRUE)
+  }
+}
+
+
+
+# Set the directory to save the Excel file
+setwd("C:/Users/mingz/OneDrive/Dissertation/R code")
